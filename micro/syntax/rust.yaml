@@ -1,0 +1,5 @@
+filetype: rust
+detect:
+  filename: "\\.rs$"
+rules:
+  - include: "rust"

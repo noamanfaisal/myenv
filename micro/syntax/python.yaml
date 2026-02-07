@@ -1,0 +1,5 @@
+filetype: python
+detect:
+  filename: "\\.py$"
+rules:
+  - include: "python"

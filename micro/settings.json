@@ -1,0 +1,11 @@
+{
+    "autosave": 5,
+    "clipboard": "terminal",
+    "colorscheme": "monokai",
+    "rmtrailingws": true,
+    "scrollbar": true,
+    "softwrap": true,
+    "statusformatl": "$(filename)  $(modified)  $(line):$(col)",
+    "statusformatr": "$(filetype)  $(encoding)",
+    "tabstospaces": true
+}
