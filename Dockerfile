@@ -18,6 +18,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install micro editor
+# Using official installation method from https://getmic.ro
+# For production use, consider downloading from GitHub releases instead:
+# https://github.com/zyedidia/micro/releases
 RUN curl https://getmic.ro | bash && \
     mv micro /usr/local/bin/ && \
     chmod +x /usr/local/bin/micro

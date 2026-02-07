@@ -114,17 +114,24 @@ install_micro() {
     
     print_info "Installing micro editor..."
     
-    # Use the official micro installer script
+    # Use the official micro installer script from https://getmic.ro
+    # Note: This uses the official installation method recommended by micro editor
+    # For enhanced security, you can manually download and verify before running:
+    # curl -o getmicro.sh https://getmic.ro && bash getmicro.sh
     if command_exists curl; then
         curl https://getmic.ro | bash
         
         # Move micro to a location in PATH
         if [[ -f "micro" ]]; then
-            if [[ -w "/usr/local/bin" ]] || sudo -n true 2>/dev/null; then
-                sudo mv micro /usr/local/bin/
+            # Try to install system-wide if possible, otherwise use user directory
+            if sudo -n true 2>/dev/null; then
+                sudo mv micro /usr/local/bin/ && print_info "Installed micro to /usr/local/bin"
+            elif [[ -w "/usr/local/bin" ]]; then
+                mv micro /usr/local/bin/ && print_info "Installed micro to /usr/local/bin"
             else
                 mkdir -p "$HOME/.local/bin"
                 mv micro "$HOME/.local/bin/"
+                print_info "Installed micro to $HOME/.local/bin"
                 
                 # Add to PATH if not already there
                 if [[ ! ":$PATH:" == *":$HOME/.local/bin:"* ]]; then

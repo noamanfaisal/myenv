@@ -59,7 +59,7 @@ The setup script will:
 
 ### Manual Installation
 
-If you prefer to install components manually:
+If you prefer to install components manually or want more control over the installation process:
 
 1. **Install tmux:**
    ```bash
@@ -74,10 +74,24 @@ If you prefer to install components manually:
    ```
 
 2. **Install micro editor:**
+   
+   Using the official installer (recommended by micro):
    ```bash
    curl https://getmic.ro | bash
    sudo mv micro /usr/local/bin/
    ```
+   
+   For enhanced security, you can download and inspect the script first:
+   ```bash
+   curl -o getmicro.sh https://getmic.ro
+   # Inspect the script content
+   cat getmicro.sh
+   # Run it after verification
+   bash getmicro.sh
+   sudo mv micro /usr/local/bin/
+   ```
+   
+   Alternatively, download pre-built binaries from [GitHub releases](https://github.com/zyedidia/micro/releases).
 
 3. **Deploy configurations:**
    ```bash
