@@ -1,0 +1,11 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "CtrlUnderscore": "lua:comment.comment",
+    "Ctrl-g": "command:goto ",
+    "Ctrl-f": "Find",
+    "Ctrl-h": "FindNext",
+    "Ctrl-r": "FindPrevious",
+    "Ctrl-e": "CommandMode",
+    "Ctrl-b": "MoveLinesUp",
+    "Ctrl-n": "MoveLinesDown"
+}

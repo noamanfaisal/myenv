@@ -1,0 +1,28 @@
+# Backup files
+*.backup.*
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+
+# Micro editor backups (these are user-specific)
+.config/micro/backups/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Test and build artifacts (if any are added later)
+__pycache__/
+*.pyc
+*.pyo
+target/
+dist/
+build/
